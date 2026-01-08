@@ -7,7 +7,7 @@ PACKAGES=("git" "curl" "docker-ce" "psmisc")
 echo "--- [Mulai Setup Otomatis] ---"
 
 # 1. Check User
-if id "$USER_BARU" &>/dev/null; then
+if id "$USER_BARU" >/dev/null 2>&1; then
   echo "[SKIP] User $USER_BARU sudah ada!"
 else
   sudo useradd -m -s /bin/bash "$USER_BARU"
